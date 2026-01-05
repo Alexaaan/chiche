@@ -29,3 +29,18 @@ async function loadProducts() {
 loadProducts();
 
 document.getElementById('env-type').textContent = /Mobile|Android|iP(hone|od|ad)/.test(navigator.userAgent) ? 'Mobile' : 'Desktop';
+
+// Prevent page scroll when scrolling over products, allow products scroll if possible
+document.getElementById('products').addEventListener('wheel', function(e) {
+    const products = this;
+    const scrollTop = products.scrollTop;
+    const scrollHeight = products.scrollHeight;
+    const clientHeight = products.clientHeight;
+
+    if ((e.deltaY > 0 && scrollTop + clientHeight < scrollHeight) || (e.deltaY < 0 && scrollTop > 0)) {
+        // Can scroll products, let it happen
+    } else {
+        // Cannot scroll products further, prevent page scroll
+        e.preventDefault();
+    }
+}, { passive: false });
