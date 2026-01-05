@@ -5,34 +5,26 @@ body {
     margin: 0;
     padding: 0;
     color: #ffffff;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(IMG_1530.png);
-    overflow: hidden;
 }
 
 header {
-    margin: 0;
-    padding: 0;
     position: fixed;
     top: 0;
-    width: 100%;
-    height: 150px;
+    left: 0;
+    width: 100vw;
+    height: calc(env(safe-area-inset-top, 0px) + 150px);
+    background-image: url(header.png);
+    background-size: cover;
+    background-position: center;
     z-index: 10;
-}
-
-.header-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
 }
 
 main {
     padding: 2rem 1rem;
     background: transparent;
-    margin-top: 150px;
-    height: calc(100vh - 150px - 4rem);
-    box-sizing: border-box;
+    margin-top: calc(env(safe-area-inset-top, 0px) + 150px);
 }
 
 
@@ -42,9 +34,6 @@ main {
     gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
-    height: 100%;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
 }
 
 .product {
