@@ -127,8 +127,9 @@ footer {
     background-color: #2196F3;
 }
 
-.whatsapp-btn {
-    background-color: #25D366;
+.snapchat-btn {
+    background-color: #FFFC00;
+    color: #000;
 }
 
 .btn:hover {
