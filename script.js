@@ -1,4 +1,4 @@
-const apiUrl = 'https://script.google.com/macros/s/AKfycbyG9YjvFlbi_rJfqvdHioympcl5aScrY3BTNmBzLzYIQUFL88CnM1SUOFSQM3yrhw5s/exec';
+const apiUrl = 'https://script.google.com/macros/s/AKfycbxzd0zTYuEYMIuDzQ5kF2IuizAT2WJPaZQLnK9bhDDuwFj-6geYgZJTd2U1-ZLphZtb/exec';
 
 async function loadProducts() {
     try {
