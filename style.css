@@ -4,9 +4,9 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #8B5CF6, #EC4899, #F97316, #EAB308);
     color: #ffffff;
     min-height: 100vh;
+    background-image: url(IMG_1530.png);
 }
 
 header {
@@ -22,17 +22,10 @@ header {
 
 main {
     padding: 2rem 1rem;
-    background: rgba(255,255,255,0.1);
-    border-radius: 20px 20px 0 0;
-    margin-top: -2rem;
-    position: relative;
-    z-index: 1;
+    background: transparent;
+    margin-top: 0;
 }
 
-.filters {
-    text-align: center;
-    margin-bottom: 1rem;
-}
 
 #products {
     display: grid;
@@ -78,23 +71,6 @@ main {
     margin: 0.5rem 0;
 }
 
-.stock {
-    font-weight: bold;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-}
-
-.stock.available {
-    color: #4CAF50;
-}
-
-.stock.limited {
-    color: #F97316;
-}
-
-.stock.out {
-    color: #EC4899;
-}
 
 footer {
     background: linear-gradient(135deg, #8B5CF6, #EC4899);
@@ -143,29 +119,6 @@ footer {
     box-shadow: 0 6px 20px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5);
 }
 
-.management {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.btn-small {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.8rem;
-    background: linear-gradient(135deg, #8B5CF6, #EC4899);
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Fredoka One', cursive;
-}
-
-.btn-small:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3), 0 0 15px rgba(255,255,255,0.5);
-}
 
 .bottom-nav {
     display: none;
