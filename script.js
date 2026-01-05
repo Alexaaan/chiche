@@ -32,6 +32,7 @@ async function loadProducts() {
             productDiv.innerHTML = `
                 <img src="${product.image}" alt="${product.nom}" loading="lazy" onerror="this.style.display='none';">
                 <h3>${product.nom}</h3>
+                <p class="price">${product.prix} €</p>
                 <div class="stock ${stockClass}" data-stock="${stock}">${stockText} (${stock})</div>
                 <div class="management">
                     <button class="btn-small decrease" data-index="${index}">-</button>

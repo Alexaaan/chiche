@@ -2,21 +2,25 @@
   {
     "nom": "Chicha Classique",
     "stock": 15,
+    "prix": 29.99,
     "image": "https://img4.dhresource.com/webp/m/0x0/f3/albu/ys/y/17/fae40a83-de29-4a46-a9b9-a34e2a41e780.jpg"
   },
   {
     "nom": "Chicha Premium",
     "stock": 8,
+    "prix": 49.99,
     "image": "https://example.com/chicha2.jpg"
   },
   {
     "nom": "Chicha Fruitée",
     "stock": 3,
+    "prix": 34.99,
     "image": "https://example.com/chicha3.jpg"
   },
   {
     "nom": "Chicha Aromatisée",
     "stock": 0,
+    "prix": 39.99,
     "image": "https://example.com/chicha4.jpg"
   }
 ]
