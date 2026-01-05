@@ -1,12 +1,15 @@
-const apiUrl = 'https://script.google.com/macros/s/AKfycbxzGQMjnn4TLxs0lFN6MVV6takVUXtMxTCyZXbJr-AIDZ4fI6eIqa8Apr9tfq04FY4/exec';
+const apiUrl = 'https://script.google.com/macros/s/AKfycbyG9YjvFlbi_rJfqvdHioympcl5aScrY3BTNmBzLzYIQUFL88CnM1SUOFSQM3yrhw5s/exec';
 
 async function loadProducts() {
     try {
+        console.log('Fetching from:', apiUrl);
         const response = await fetch(apiUrl);
+        console.log('Response status:', response.status);
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error('Network response was not ok: ' + response.status);
         }
         const data = await response.json();
+        console.log('Data received:', data);
         const productsContainer = document.getElementById('products');
         productsContainer.innerHTML = ''; // Clear any existing content
 
@@ -27,7 +30,7 @@ async function loadProducts() {
             const productDiv = document.createElement('div');
             productDiv.className = 'product';
             productDiv.innerHTML = `
-                <img src="${product.image}" alt="${product.nom}" loading="lazy">
+                <img src="${product.image}" alt="${product.nom}" loading="lazy" onerror="console.log('Image failed to load:', this.src); this.style.display='none';">
                 <h3>${product.nom}</h3>
                 <div class="stock ${stockClass}">${stockText}</div>
             `;
