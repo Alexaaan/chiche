@@ -3,19 +3,19 @@
     "nom": "Zooy Fraise",
     "stock": 20,
     "prix": 25,
-    "image": "https://img4.dhresource.com/webp/m/0x0/f3/albu/ys/y/17/fae40a83-de29-4a46-a9b9-a34e2a41e780.jpg"
+    "image": "https://placehold.co/600x400?text=Fraise"
   },
   {
     "nom": "Zooy Raisin",
     "stock": 8,
     "prix": 25,
-    "image": "https://img4.dhresource.com/webp/m/0x0/f3/albu/ys/y/17/fae40a83-de29-4a46-a9b9-a34e2a41e780.jpg"
+    "image": "https://placehold.co/600x400?text=Raisin"
   },
   {
     "nom": "Zooy Pomme",
     "stock": 3,
     "prix": 25,
-    "image": "https://example.com/chicha3.jpg"
+    "image": "https://placehold.co/600x400?text=Pomme"
   },
   {
     "nom": "Chicha Aromatisée",
