@@ -1,6 +1,6 @@
 {
-    "name": "Chicha Shop",
-    "short_name": "Chicha",
+    "name": "shopuff",
+    "short_name": "shopuff",
     "description": "Découvrez notre sélection de chichas avec stock en temps réel",
     "start_url": "/",
     "display": "standalone",
@@ -8,7 +8,7 @@
     "theme_color": "#4CAF50",
     "icons": [
         {
-            "src": "icon.png",
+            "src": "logo.png",
             "sizes": "192x192",
             "type": "image/png"
         }

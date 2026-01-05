@@ -1,33 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600;700&display=swap');
+
 body {
-    font-family: 'Inter', 'SF Pro Display', 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0 0 80px 0; /* Padding for bottom nav */
-    background: #0a0a23; /* Dark navy blue */
+    padding: 0;
+    background: linear-gradient(135deg, #8B5CF6, #EC4899, #F97316, #EAB308);
     color: #ffffff;
+    min-height: 100vh;
 }
 
 header {
-    background: linear-gradient(135deg, #8e2de2, #4a00e0); /* Vibrant purple to blue */
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-
-header h1 {
     margin: 0;
-    font-size: 2.5rem;
-    font-weight: 300;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    padding: 0;
 }
 
-header p {
-    margin: 0.5rem 0 0;
-    color: #e0e0e0;
+.header-image {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 main {
     padding: 2rem 1rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px 20px 0 0;
+    margin-top: -2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .filters {
@@ -37,22 +36,25 @@ main {
 
 #products {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .product {
-    background: linear-gradient(135deg, #ff9a9e, #fecfef); /* Pink to purple gradient */
+    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
     border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1), 0 0 20px rgba(255,255,255,0.2);
     overflow: hidden;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 .product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2), 0 0 30px rgba(255,215,0,0.5);
 }
 
 .product img {
@@ -64,15 +66,15 @@ main {
 
 .product h3 {
     margin: 1rem 0 0.5rem;
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: 'Fredoka One', cursive;
+    color: #8B5CF6;
 }
 
 .price {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #ffffff;
+    color: #EC4899;
     margin: 0.5rem 0;
 }
 
@@ -87,15 +89,15 @@ main {
 }
 
 .stock.limited {
-    color: #FF9800;
+    color: #F97316;
 }
 
 .stock.out {
-    color: #F44336;
+    color: #EC4899;
 }
 
 footer {
-    background: linear-gradient(135deg, #2c3e50, #34495e);
+    background: linear-gradient(135deg, #8B5CF6, #EC4899);
     color: white;
     text-align: center;
     padding: 1.5rem 1rem;
@@ -122,21 +124,23 @@ footer {
     color: white;
     border-radius: 25px;
     font-weight: bold;
+    font-family: 'Fredoka One', cursive;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .call-btn {
-    background: linear-gradient(135deg, #2196F3, #21CBF3);
+    background: linear-gradient(135deg, #8B5CF6, #EC4899);
 }
 
 .snapchat-btn {
-    background: linear-gradient(135deg, #FFFC00, #FFD700);
+    background: linear-gradient(135deg, #F97316, #EAB308);
     color: #000;
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5);
 }
 
 .management {
@@ -149,31 +153,22 @@ footer {
 .btn-small {
     padding: 0.25rem 0.5rem;
     font-size: 0.8rem;
-    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    background: linear-gradient(135deg, #8B5CF6, #EC4899);
     color: white;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-family: 'Fredoka One', cursive;
 }
 
 .btn-small:hover {
     transform: scale(1.1);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3), 0 0 15px rgba(255,255,255,0.5);
 }
 
 .bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(135deg, #2c3e50, #34495e);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0.5rem;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
-    z-index: 1000;
+    display: none;
 }
 
 .nav-btn {
@@ -209,30 +204,17 @@ footer {
 }
 
 @media (max-width: 768px) {
-    header {
-        background: #4CAF50;
-        padding: 0.5rem;
-    }
-
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    header p {
-        font-size: 0.9rem;
-    }
-
     main {
-        padding: 0.5rem;
+        padding: 1rem;
+        margin-top: 0;
     }
 
     #products {
-        grid-template-columns: 1fr;
         gap: 0.5rem;
     }
 
     .product img {
-        height: 150px;
+        height: 120px;
     }
 
     .contact-buttons {

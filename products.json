@@ -3,13 +3,13 @@
     "nom": "Zooy Fraise",
     "stock": 20,
     "prix": 25,
-    "image": "https://placehold.co/600x400?text=Fraise"
+    "image": "https://placehold.co/20x40?text=Fraise"
   },
   {
     "nom": "Zooy Raisin",
     "stock": 15,
     "prix": 25,
-    "image": "https://placehold.co/600x400?text=Raisin"
+    "image": "https://placehold.co/20x40?text=Raisin"
   },
   {
     "nom": "Zooy Pomme",
