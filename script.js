@@ -1,3 +1,5 @@
+let showAvailable = false;
+
 async function loadProducts() {
     try {
         let data = JSON.parse(localStorage.getItem('products'));
@@ -8,6 +10,10 @@ async function loadProducts() {
             }
             data = await response.json();
             localStorage.setItem('products', JSON.stringify(data));
+        }
+
+        if (showAvailable) {
+            data = data.filter(product => product.stock > 0);
         }
 
         const productsContainer = document.getElementById('products');
@@ -72,3 +78,12 @@ function updateStock(index, change) {
 
 // Load products on page load
 loadProducts();
+
+document.getElementById('filter-available').addEventListener('click', () => {
+    showAvailable = !showAvailable;
+    const btn = document.getElementById('filter-available');
+    btn.textContent = showAvailable ? 'Afficher tous' : 'Afficher seulement disponibles';
+    loadProducts();
+});
+
+document.getElementById('env-type').textContent = /Mobile|Android|iP(hone|od|ad)/.test(navigator.userAgent) ? 'Mobile' : 'Desktop';

@@ -29,6 +29,11 @@ main {
     padding: 2rem 1rem;
 }
 
+.filters {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
 #products {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -93,6 +98,12 @@ footer {
     text-align: center;
     padding: 1.5rem 1rem;
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+#env {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
 }
 
 .contact-buttons {
