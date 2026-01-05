@@ -1,6 +1,4 @@
-const sheetId = '1-Oy-P5b5Sw3sWVqnAR_Z9L8wMmz4WKGoCjaXHF3ZaTs'; // Your Google Sheet ID
-
-const apiUrl = `https://opensheet.elk.sh/${sheetId}/Sheet1`; // Assuming sheet name is 'Sheet1'
+const apiUrl = 'https://script.google.com/macros/s/AKfycbxzGQMjnn4TLxs0lFN6MVV6takVUXtMxTCyZXbJr-AIDZ4fI6eIqa8Apr9tfq04FY4/exec';
 
 async function loadProducts() {
     try {
