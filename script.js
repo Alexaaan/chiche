@@ -41,6 +41,8 @@ async function loadProducts() {
                 <p class="price">${product.prix} €</p>
                 <div class="stock ${stockClass}" data-stock="${stock}">${stockText} (${stock})</div>
                 <div class="management">
+                    <input type="number" class="stock-input" data-index="${index}" value="${stock}" min="0">
+                    <button class="btn-small set-stock" data-index="${index}">Set</button>
                     <button class="btn-small decrease" data-index="${index}">-</button>
                     <button class="btn-small increase" data-index="${index}">+</button>
                 </div>
@@ -61,6 +63,16 @@ async function loadProducts() {
                 updateStock(index, -1);
             });
         });
+        document.querySelectorAll('.set-stock').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const index = e.target.dataset.index;
+                const input = document.querySelector(`.stock-input[data-index="${index}"]`);
+                const newStock = parseInt(input.value);
+                if (!isNaN(newStock) && newStock >= 0) {
+                    setStock(index, newStock);
+                }
+            });
+        });
     } catch (error) {
         console.error('Error loading products:', error);
         document.getElementById('products').innerHTML = '<p>Erreur de chargement des produits.</p>';
@@ -71,6 +83,15 @@ function updateStock(index, change) {
     let data = JSON.parse(localStorage.getItem('products'));
     if (data && data[index]) {
         data[index].stock = Math.max(0, parseInt(data[index].stock) + change);
+        localStorage.setItem('products', JSON.stringify(data));
+        loadProducts(); // Reload to update display
+    }
+}
+
+function setStock(index, newStock) {
+    let data = JSON.parse(localStorage.getItem('products'));
+    if (data && data[index]) {
+        data[index].stock = newStock;
         localStorage.setItem('products', JSON.stringify(data));
         loadProducts(); // Reload to update display
     }

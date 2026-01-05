@@ -7,20 +7,20 @@
   },
   {
     "nom": "Zooy Raisin",
-    "stock": 8,
+    "stock": 15,
     "prix": 25,
     "image": "https://placehold.co/600x400?text=Raisin"
   },
   {
     "nom": "Zooy Pomme",
-    "stock": 3,
+    "stock": 15,
     "prix": 25,
     "image": "https://placehold.co/600x400?text=Pomme"
   },
   {
-    "nom": "Chicha Aromatisée",
-    "stock": 0,
-    "prix": 39.99,
+    "nom": "Zooy Mango",
+    "stock": 15,
+    "prix": 25,
     "image": "https://example.com/chicha4.jpg"
   }
 ]
